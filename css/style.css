@@ -48,7 +48,6 @@ main {
 }
 #root {
     width: 500px;
-    height: 700px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -82,6 +81,8 @@ li span {
     display: flex;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
+    word-wrap: break-word; text-overflow: ellipsis;
 }
 li div {
     

@@ -15,7 +15,7 @@ const app = new Vue( {
                 new Todo("Fai il millestone 1", true),
                 new Todo("Fai il millestone 2", true),
                 new Todo("Fai il millestone 3", true),
-                new Todo("Fai il bonus 1", false),
+                new Todo("Fai il bonus 1", true),
                 new Todo("Fai il bonus 2", false),
                 new Todo("Porta fuori il cane", false),
                 new Todo("Fai la spesa", false),
@@ -31,11 +31,14 @@ const app = new Vue( {
             this.todo.splice(index, 1);
         },
         addTodo() {
-            console.log("qui");
-            if(this.inputTodo.length > 1) {
-                this.todo.push(new Todo(this.inputTodo,false));
+            // Trim per togliere gli spazi intorno al input 
+            const input = this.inputTodo.trim();
+            // Se l'utente ha digitato 2 o più caratteri diversi dallo spazio
+            if(input.length > 1) {
+                // Aggiungo l'input al array
+                this.todo.push(new Todo(input ,false));
+                // Resetto l'input
                 this.inputTodo = "";
-
             }
         }
     }
