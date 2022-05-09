@@ -21,7 +21,7 @@ main {
     align-items: center;
 }
 #root {
-    width: 450px;
+    width: 500px;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -32,6 +32,7 @@ main {
 
 ul {
     width: 100%;
+    border-radius: 2px;
 
 
 }
@@ -39,12 +40,12 @@ li {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    height: 2.3rem;
-    border: 1px solid #F3F3F3;
+    height: 3.5rem;
+    border: 1px solid #F0F0F0;
     
 }
 li span {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     flex-grow: 1;
     background-color: #FAFAFA;
     padding-left: 10px;
@@ -54,9 +55,15 @@ li span {
 li div {
     
     font-size: 1.6rem;
-    width: 2rem;
+    width: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     
+}
+
+/* utility Vue js */
+.done {
+    text-decoration: line-through;
+    text-decoration-color: limegreen;
 }
