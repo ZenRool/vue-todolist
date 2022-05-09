@@ -11,26 +11,68 @@ input {
     height: 3.5rem;
     font-size: 1.5rem;
     padding: 0 10px;
-    /* margin: 1.3rem 0; */
 }
 button {
-    margin-left: 30px;
-    height: 3rem;
-    width: 3rem;
-    font-size: 1.4rem;
+    margin-left: 35px;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.3rem;
     padding: 3px 0px;
-    color: limegreen;
-    border-color: #444444;
-    background-color: #333333;
+    color: darkgreen;
+    border: none;
+    background-color: aliceblue;
     transform: rotate(45deg);
+    cursor: pointer;
+    
+    position: relative;
 }
 button:hover {
-    border-color: limegreen;
-    background-color: darkslategray;
+    color: #222222;
+    background-color: azure;
 }
-button div {
+button span {
+    display: block;
+    font-weight: 600;
     transform: rotate(-45deg);
+}
+button .right {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid #333333;
+    border-right: 10px solid #333333;
 
+    transition: 800ms;
+    animation-timing-function: linear;
+
+}
+button .left {
+    position: absolute;
+    top: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-bottom: 10px solid limegreen;
+    border-left: 10px solid limegreen;
+
+    transition: 800ms;
+    animation-timing-function: linear;
+
+
+
+}
+button:hover .right {
+    left: 1rem;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    /* animation-name: move-12-top; */
+}
+button:hover .left {
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 /* Header  */
 header {
@@ -60,7 +102,7 @@ main {
     /* border: 1px solid lightgrey; */
 }
 .form {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 ul {
@@ -88,8 +130,10 @@ li span {
     overflow: hidden;
     word-wrap: break-word; text-overflow: ellipsis;
 }
+li span:hover {
+    background-color: #FDFDFD;
+}
 li div {
-    
     font-size: 1.6rem;
     width: 2.5rem;
     display: flex;
@@ -97,7 +141,9 @@ li div {
     align-items: center;
     color: #222222;
     cursor: pointer;
-    
+}
+li div:hover {
+    color: #D00000;
 }
 .removed {
     position: absolute;
@@ -119,7 +165,7 @@ li div {
 }
 /* resume  */
 .resume {
-    background-color: greenyellow;
+    background-color: greenyellow !important;
 }
 .trash {
     font-size: 3.4rem;

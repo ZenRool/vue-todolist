@@ -35,7 +35,10 @@
                 <div class="form">
                     <input type="text" v-model="inputTodo" @keyup.enter="addTodo">
                     <button @click="addTodo" >
-                        <div>Add</div>
+                        <span>Add</span>
+                        <div class="left"></div>
+                        <div class="right"></div>
+
                     </button>
                 </div>
 
@@ -54,6 +57,9 @@
                     <h2>
                         Task rimosse
                     </h2>
+                    <div class="trash" @click="delate">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
                     <ul>
                         <li v-for="(re, index) in removed">
                             <span :class="{resume: re.done}" @click="resume(re, index)">
@@ -63,9 +69,6 @@
 
                         </li>
                     </ul>
-                    <div class="trash" @click="delate">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
                 </div>
             </div>
 
