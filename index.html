@@ -50,7 +50,25 @@
                         </div>
                     </li>
                 </ul>
+                <div class="removed" v-if="removed.length > 0">
+                    <h2>
+                        Task rimosse
+                    </h2>
+                    <ul>
+                        <li v-for="(re, index) in removed">
+                            <span :class="{resume: re.done}" @click="resume(re, index)">
+                                {{ re.task }}
+
+                            </span>
+
+                        </li>
+                    </ul>
+                    <div class="trash" @click="delate">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
 

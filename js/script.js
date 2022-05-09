@@ -23,11 +23,20 @@ const app = new Vue( {
                 new Todo("Compra il CAFFÈ", false),
                 new Todo("Fai il caffè", false)
             ],
+        removed: 
+            [
+                // il done di todo diventa un se è stato premuto una volta 
+            ]
+        ,
         inputTodo: ""
     
     }),
     methods: {
         removeTodo(index) {
+
+            this.todo[index].done = false;
+            this.removed.push(this.todo[index]);
+            // prima aggiunge l'elemento ai rimossi 
             this.todo.splice(index, 1);
         },
         addTodo() {
@@ -42,9 +51,22 @@ const app = new Vue( {
             }
         },
         // Toggle del done, inverte il done del oggetto dato in input
-        toggleDone: element => element.done = !element.done
-
-    }
+        toggleDone: element => element.done = !element.done,
+        
+        resume(element, index) {
+            if (element.done) {
+                element.done = false;
+                this.todo.push(element);
+                this.removed.splice(index, 1);
+            }
+            else {
+                element.done = true;
+            }
+        },
+        delate() {
+            this.removed.splice(0, this.removed.length);
+        }
+    },
 } 
 );
 

@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    font-family: sans-serif;
+}
 input {
     height: 3.5rem;
     font-size: 1.5rem;
@@ -39,6 +42,7 @@ header {
 h1 {
     margin-left: 1rem;
 }
+
 /* Main  */
 main {
     display: flex;
@@ -95,8 +99,33 @@ li div {
     cursor: pointer;
     
 }
+.removed {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 250px;
+}
+.removed li {
+    height: 2rem;
+}
+.removed li span {
+    font-size: 1.1rem;
+
+}
 /* utility Vue js */
 .done {
     text-decoration: line-through;
     text-decoration-color: limegreen;
+}
+/* resume  */
+.resume {
+    background-color: greenyellow;
+}
+.trash {
+    font-size: 3.4rem;
+    text-align: center;
+    background-color: #FF5050;
+    padding: 0.5rem 0;
+    cursor: pointer;
+
 }
