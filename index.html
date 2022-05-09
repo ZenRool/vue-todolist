@@ -33,9 +33,9 @@
             <div id = "root">
                 <!-- Vue  -->
                 <ul>
-                    <li v-for="to in todo">
+                    <li v-for="(to, index) in todo" v-if="todo.includes(to)">
                         <span :class="{done: to.done}">{{to.task}}</span>
-                        <div>
+                        <div @click="removeTodo(index)">
                             <i class="fas fa-trash-alt"></i>
                         </div>
                     </li>
