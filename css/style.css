@@ -4,6 +4,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+input {
+    height: 3.5rem;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    /* margin: 1.3rem 0; */
+}
+button {
+    margin-left: 30px;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.4rem;
+    padding: 3px 0px;
+    color: limegreen;
+    border-color: #444444;
+    background-color: #333333;
+    transform: rotate(45deg);
+}
+button:hover {
+    border-color: limegreen;
+    background-color: darkslategray;
+}
+button div {
+    transform: rotate(-45deg);
+
+}
 /* Header  */
 header {
     display: flex;
@@ -19,15 +44,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #root {
     width: 500px;
     height: 700px;
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
 
     /* border: 1px solid lightgrey; */
+}
+.form {
+    margin-bottom: 30px;
 }
 
 ul {
@@ -64,7 +94,6 @@ li div {
     cursor: pointer;
     
 }
-
 /* utility Vue js */
 .done {
     text-decoration: line-through;

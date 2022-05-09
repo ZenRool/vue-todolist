@@ -32,9 +32,19 @@
         <div class = "container">
             <div id = "root">
                 <!-- Vue  -->
+                <div class="form">
+                    <input type="text" v-model="inputTodo">
+                    <button @click="addTodo" >
+                        <div>Add</div>
+                    </button>
+                </div>
+
                 <ul>
-                    <li v-for="(to, index) in todo" v-if="todo.includes(to)">
-                        <span :class="{done: to.done}">{{to.task}}</span>
+                    <!-- Per ogni elemento in todo  -->
+                    <li v-for="(to, index) in todo">
+                        <span :class="{done: to.done}">
+                            {{ to.task }}
+                        </span>
                         <div @click="removeTodo(index)">
                             <i class="fas fa-trash-alt"></i>
                         </div>

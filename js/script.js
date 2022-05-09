@@ -13,8 +13,8 @@ const app = new Vue( {
         todo:
             [
                 new Todo("Fai il millestone 1", true),
-                new Todo("Fai il millestone 2", false),
-                new Todo("Fai il millestone 3", false),
+                new Todo("Fai il millestone 2", true),
+                new Todo("Fai il millestone 3", true),
                 new Todo("Fai il bonus 1", false),
                 new Todo("Fai il bonus 2", false),
                 new Todo("Porta fuori il cane", false),
@@ -22,12 +22,21 @@ const app = new Vue( {
                 new Todo("Prepara da mangiare", false),
                 new Todo("Compra il CAFFÈ", false),
                 new Todo("Fai il caffè", false)
-            ]
+            ],
+        inputTodo: ""
     
     }),
     methods: {
         removeTodo(index) {
             this.todo.splice(index, 1);
+        },
+        addTodo() {
+            console.log("qui");
+            if(this.inputTodo.length > 1) {
+                this.todo.push(new Todo(this.inputTodo,false));
+                this.inputTodo = "";
+
+            }
         }
     }
 } 
