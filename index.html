@@ -42,7 +42,7 @@
                 <ul>
                     <!-- Per ogni elemento in todo  -->
                     <li v-for="(to, index) in todo">
-                        <span :class="{done: to.done}">
+                        <span :class="{done: to.done}" @click="toggleDone(to)">
                             {{ to.task }}
                         </span>
                         <div @click="removeTodo(index)">

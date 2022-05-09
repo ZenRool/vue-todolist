@@ -16,7 +16,7 @@ const app = new Vue( {
                 new Todo("Fai il millestone 2", true),
                 new Todo("Fai il millestone 3", true),
                 new Todo("Fai il bonus 1", true),
-                new Todo("Fai il bonus 2", false),
+                new Todo("Fai il bonus 2", true),
                 new Todo("Porta fuori il cane", false),
                 new Todo("Fai la spesa", false),
                 new Todo("Prepara da mangiare", false),
@@ -40,7 +40,10 @@ const app = new Vue( {
                 // Resetto l'input
                 this.inputTodo = "";
             }
-        }
+        },
+        // Toggle del done, inverte il done del oggetto dato in input
+        toggleDone: element => element.done = !element.done
+
     }
 } 
 );
